@@ -1,29 +1,45 @@
-# Kehribar Gece — Static Distribution & Examples
+# Kehribar Gece — Static Files & Examples
 
-Statik web projeleri için Kehribar Gece tema önizlemesi ve Bootstrap dağıtım dosyaları.
+Kehribar Gece için kullanıma hazır statik dosyalar ve Bootstrap örnekler sayfası yaklaşımıyla hazırlanmış HTML kılavuzu.
 
-> **Preview / alpha:** CSS ve JavaScript dosyaları kaynak depodaki **Bootstrap 6.0.0-alpha.1** derleme çıktılarından alınmıştır. `kehribar-gece.css` ayrıca yüklenen bağımsız bir tema katmanıdır. Henüz üretim ortamı için test edilmiş bir Kehribar Gece sürümü değildir.
+> **Önizleme:** Şu anki Bootstrap CSS/JS dosyaları 6.0.0-alpha.1 sürümüne aittir. `kehribar-gece.css` ilk tema katmanıdır; Mac'te bulunan geçmiş özelleştirmeler henüz geri aktarılmamıştır. Bu bir üretim sürümü değildir.
 
-## Hızlı başlangıç
+## Örnek galerisi
 
-[Canlı olmayan, depoda bulunan HTML örneğini aç](examples/index.html). Dosyayı indirdikten sonra yerel olarak tarayıcıda açabilirsin.
+**[Örnekler / Galeri](examples/index.html)** — diğer sayfalara bağlantılar ve hızlı başlangıç
+
+| Örnek | Açıklama |
+| --- | --- |
+| [Admin Dashboard](examples/admin.html) | Sidebar, KPI'lar, temsili grafik ve kayıt tablosu |
+| [Sign-in](examples/signin.html) | Sunucuya veri göndermeyen form taslağı |
+| [Pricing](examples/pricing.html) | Üç sütunlu fiyatlandırma şablonu |
+| [Components](examples/components.html) | Renkler, düğmeler, alanlar ve kod örnekleri |
+
+Bu örneklerin tamamı bağımsız HTML dosyalarıdır. İnternet/CDN bağlantısı veya build gerektirmez. `examples/assets/examples.css`, örneklere ait yardımcı stil dosyasıdır; dağıtılan temanın parçası olarak düşünülmemelidir.
+
+## CSS / JS kullanımı
 
 ```html
-<link rel="stylesheet" href="./dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="./dist/css/kehribar-gece.css">
-<script src="./dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="dist/css/kehribar-gece.css">
+<script src="dist/js/bootstrap.bundle.min.js"></script>
 ```
 
-## Dizinler
+Örneği yerel görmek için depoyu ZIP olarak indirip `examples/index.html` dosyasını aç. Dosya yolları dizin düzenine göre göreli tanımlanmıştır.
 
-- `dist/css/`: hazır Bootstrap CSS dosyaları ve Kehribar Gece tema katmanı
-- `dist/js/`: Bootstrap bundle JS
-- `examples/`: dış servise ihtiyaç duymayan HTML önizlemeleri
+## Dağıtım dosyaları
 
-Geliştirme kaynakları: [bootstrap-kehribar-gece](https://github.com/MuhammedOzby/bootstrap-kehribar-gece).
+- `dist/css/bootstrap*.min.css`: Bootstrap temel, grid, reboot ve utility çıktıları
+- `dist/css/kehribar-gece.css`: Önizleme niteliğinde kişisel tema katmanı
+- `dist/js/bootstrap.bundle.min.js`: Bootstrap JavaScript bundle
+- `examples/`: Galeri ve HTML şablonları
 
-## Lisans ve kaynak
+**Kaynak / geliştirme deposu:** [bootstrap-kehribar-gece](https://github.com/MuhammedOzby/bootstrap-kehribar-gece)
 
-Bootstrap © The Bootstrap Authors — [MIT License](LICENSE). Bootstrap'ın resmî deposu: https://github.com/twbs/bootstrap
+## Özelleştirmelerin geri aktarılması
 
-Kehribar Gece bağımsız bir tema deneyidir; Bootstrap'ın resmî dağıtımı değildir. Tema katmanı önizleme olarak sunulmaktadır.
+Bu depodaki renkler ve örnek stiller, daha önce Mac üzerinde geliştirilmiş özgün SCSS / CSS düzeninin yerine geçmez. Eski kaynaklar erişilebilir olduğunda ayrı karşılaştırma ve entegrasyon yapılmalıdır.
+
+## Lisans
+
+Bu depodaki kişisel katkılar için [LICENSE](LICENSE); yeniden dağıtılan Bootstrap kodunun atıfları ve orijinal MIT lisansı için [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
