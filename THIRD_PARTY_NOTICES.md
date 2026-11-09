@@ -1,37 +1,7 @@
 # Third-party notices
 
-## Bootstrap
+- Bootstrap **5.3.8** — Copyright 2011–2025 The Bootstrap Authors. MIT. Applies to Bootstrap CSS, the compiled theme, and the JavaScript bundle. [Full license](licenses/LICENSE-MIT.txt). Source: https://github.com/twbs/bootstrap/tree/v5.3.8
+- Popper **2.11.8** — Copyright 2019 Federico Zivolo. MIT. Included in the Bootstrap bundle. [Full license](licenses/LICENSE-POPPER.md). Source: https://github.com/floating-ui/floating-ui/tree/v2.x
+- Source Sans 3 — Adobe / Paul D. Hunt. SIL Open Font License 1.1. [Full license](dist/fonts/source-sans-3/OFL.txt). Source: https://github.com/adobe-fonts/source-sans
 
-The files named `bootstrap*.css` and `bootstrap*.js` in `dist/` are derived from Bootstrap.
-
-Copyright (c) 2011-2026 The Bootstrap Authors.
-
-Bootstrap is released under the MIT License. Its full license is reproduced below:
-
-```text
-The MIT License (MIT)
-
-Copyright (c) 2011-2026 The Bootstrap Authors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-```
-
-Official upstream: https://github.com/twbs/bootstrap
-
-The repository-level [LICENSE](LICENSE) covers the original Kehribar Gece additions. Bootstrap's original copyright and MIT license remain applicable to redistributed Bootstrap files.
+The repository [LICENSE](LICENSE) covers the original Kehribar Gece contributions.

@@ -1,45 +1,47 @@
-# Kehribar Gece — Static Files & Examples
+# Kehribar Gece — Statik dosyalar
 
-Kehribar Gece için kullanıma hazır statik dosyalar ve Bootstrap örnekler sayfası yaklaşımıyla hazırlanmış HTML kılavuzu.
+Orijinal Kehribar Gece yönetim panelinin hazır HTML, CSS, JavaScript ve font dosyaları.
+Ana Bootstrap sürümü **5.3.8** olarak sabittir. Yeni kararlı sürüm çıktığında güncelleme ayrıca değerlendirilir.
 
-> **Önizleme:** Şu anki Bootstrap CSS/JS dosyaları 6.0.0-alpha.1 sürümüne aittir. `kehribar-gece.css` ilk tema katmanıdır; Mac'te bulunan geçmiş özelleştirmeler henüz geri aktarılmamıştır. Bu bir üretim sürümü değildir.
+## Önizleme
 
-## Örnek galerisi
+[Panel](index.html) · [Örnek galerisi](examples.html) · [Bileşenler](components.html) · [Boş başlangıç](blank.html)
 
-**[Örnekler / Galeri](examples/index.html)** — diğer sayfalara bağlantılar ve hızlı başlangıç
+Sayfaları doğrudan tarayıcıda açabilirsiniz. Kurulum, derleme ve CDN gerekmez.
+Aydınlık, karanlık ve sistem görünümü desteklenir. Tüm veriler örnektir.
 
-| Örnek | Açıklama |
-| --- | --- |
-| [Admin Dashboard](examples/admin.html) | Sidebar, KPI'lar, temsili grafik ve kayıt tablosu |
-| [Sign-in](examples/signin.html) | Sunucuya veri göndermeyen form taslağı |
-| [Pricing](examples/pricing.html) | Üç sütunlu fiyatlandırma şablonu |
-| [Components](examples/components.html) | Renkler, düğmeler, alanlar ve kod örnekleri |
+Diğer sayfalar: [Müşteriler](customers.html), [Fatura](invoice.html), [Giriş](login.html), [Profil](profile.html), [Fiyatlandırma](pricing.html), [404](404.html), [500](500.html), [Bakım](maintenance.html).
+Eski `examples/` bağlantıları ilgili sayfalara yönlenir.
 
-Bu örneklerin tamamı bağımsız HTML dosyalarıdır. İnternet/CDN bağlantısı veya build gerektirmez. `examples/assets/examples.css`, örneklere ait yardımcı stil dosyasıdır; dağıtılan temanın parçası olarak düşünülmemelidir.
-
-## CSS / JS kullanımı
+## Kendi sayfanızda kullanın
 
 ```html
-<link rel="stylesheet" href="dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="dist/css/kehribar-gece.css">
-<script src="dist/js/bootstrap.bundle.min.js"></script>
+<html lang="tr" data-bs-theme="dark">
+<head>
+  <script src="dist/js/theme.js"></script>
+  <link rel="stylesheet" href="dist/css/kehribar-gece.min.css">
+</head>
+<body>
+  <!-- Sayfa içeriği -->
+  <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <script src="dist/js/layout.js"></script>
+</body>
+</html>
 ```
 
-Örneği yerel görmek için depoyu ZIP olarak indirip `examples/index.html` dosyasını aç. Dosya yolları dizin düzenine göre göreli tanımlanmıştır.
+Tema CSS dosyası Bootstrap bileşenlerini içerir. Bu kullanımda ayrıca `bootstrap.min.css` yüklemeyin.
+`kehribar-gece.css`, aynı derlenmiş temanın uyumluluk kopyasıdır; önceki tema katmanı değildir.
+`pages.css` ve `components.css` ilgili örnek sayfaların ek stilleridir.
+`dist/css/bootstrap*.min.css` dosyaları temasız Bootstrap 5.3.8 çıktılarıdır.
+Fontların çalışması için `dist/css/` ile `dist/fonts/` dizin yapısını koruyun.
 
-## Dağıtım dosyaları
+## Kaynak ve güncelleme
 
-- `dist/css/bootstrap*.min.css`: Bootstrap temel, grid, reboot ve utility çıktıları
-- `dist/css/kehribar-gece.css`: Önizleme niteliğinde kişisel tema katmanı
-- `dist/js/bootstrap.bundle.min.js`: Bootstrap JavaScript bundle
-- `examples/`: Galeri ve HTML şablonları
-
-**Kaynak / geliştirme deposu:** [bootstrap-kehribar-gece](https://github.com/MuhammedOzby/bootstrap-kehribar-gece)
-
-## Özelleştirmelerin geri aktarılması
-
-Bu depodaki renkler ve örnek stiller, daha önce Mac üzerinde geliştirilmiş özgün SCSS / CSS düzeninin yerine geçmez. Eski kaynaklar erişilebilir olduğunda ayrı karşılaştırma ve entegrasyon yapılmalıdır.
+[Geliştirme deposu](https://github.com/MuhammedOzby/bootstrap-kehribar-gece) içindeki `kehribar-gece/` klasörü kaynak alınır.
+Bu depo yalnızca hazır statik dosyaları dağıtır. Orijinal tema Bootstrap 5.3.8 ve Sass 1.78.0 ile derlenmiştir.
+Go `html/template` örnekleri `templates/go/` klasöründedir. `AssetBase` değerini dağıtımınızın `dist/` adresine ayarlayın.
+`manifest.json`, dağıtım sürümlerini ve dosyaların SHA-256 özetlerini içerir.
 
 ## Lisans
 
-Bu depodaki kişisel katkılar için [LICENSE](LICENSE); yeniden dağıtılan Bootstrap kodunun atıfları ve orijinal MIT lisansı için [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Kişisel katkılar: [LICENSE](LICENSE). Bootstrap, Popper ve Source Sans 3: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
